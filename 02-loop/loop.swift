@@ -11,7 +11,7 @@ app (file o) compute(int i)
 }
 
 printf("Running loop...");
-foreach i in [0:9]
+foreach i in [1:9]
 {
   file f<"f-%i.txt"%i> = compute(i);
 }
