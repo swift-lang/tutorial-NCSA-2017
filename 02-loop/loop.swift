@@ -4,14 +4,18 @@
 */
 
 import io;
+import sys;
 
-app (file o) compute(int i)
+string SFW = getenv("SFW");
+printf("SFW: %s", SFW);
+
+app (file o) task(int i)
 {
-  "./compute.sh" i o;
+  (SFW+"/task.sh") i o;
 }
 
 printf("Running loop...");
 foreach i in [1:9]
 {
-  file f<"f-%i.txt"%i> = compute(i);
+  file f<"f-%i.txt"%i> = task(i);
 }
