@@ -4,14 +4,10 @@
 */
 
 import io;
-import sys;
-
-string SFW = getenv("SFW");
-printf("SFW: %s", SFW);
 
 app (file o) task(int i)
 {
-  (SFW+"/task.sh") i o;
+  "./task.sh" i o;
 }
 
 printf("Running loop...");
